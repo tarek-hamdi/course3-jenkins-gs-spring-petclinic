@@ -1,13 +1,13 @@
 pipeline {
     agent any
     stages {
-        stage('checkout') {
-            steps {
-                sh 'rm -rf course3-jenkins-gs-spring-petclinic'
-                sh 'git clone https://github.com/g0t4/course3-jenkins-gs-spring-petclinic.git'
-                
-            }
-        }
+#        stage('checkout') {
+#            steps {
+#                sh 'rm -rf course3-jenkins-gs-spring-petclinic'
+#                sh 'git clone https://github.com/g0t4/course3-jenkins-gs-spring-petclinic.git'
+#                
+#            }
+#        }
         stage('build') {
             steps {
                 sh 'cd course3-jenkins-gs-spring-petclinic && ./mvnw package'
